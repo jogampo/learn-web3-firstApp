@@ -21,7 +21,7 @@ export default function Home() {
     localStorage.setItem('previsouslyConnected', true)
   }, [activate])
 
-  
+
   useEffect(() => {
     if (localStorage.getItem('previsouslyConnected') === 'true') {
       connect()
@@ -46,7 +46,7 @@ export default function Home() {
         active ? 
         <>
           <button onClick={disconnect}>Disconnect wallet</button>
-          <p> you are connected to {chainId} network. <br />
+          <p> you are connected to network with ID: {chainId} . <br />
             your account is: {account}
           </p>
         </>
